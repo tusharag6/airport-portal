@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Airline Booking</title>
+    <link rel="stylesheet" href="booking.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Airline Booking</h1>
+    </header>
+
+    <main>
+      <h2>Flight Booking</h2>
+      <form id="booking-form">
+        <label for="from-select">From:</label>
+        <select id="from-select" required>
+          <option value="">Select origin</option>
+          <option value="New York">New York</option>
+          <option value="London">London</option>
+          <option value="Tokyo">Tokyo</option>
+          <!-- Add more options as needed -->
+        </select>
+
+        <label for="to-select">To:</label>
+        <select id="to-select" required>
+          <option value="">Select destination</option>
+          <option value="Los Angeles">Los Angeles</option>
+          <option value="Paris">Paris</option>
+          <option value="Sydney">Sydney</option>
+          <!-- Add more options as needed -->
+        </select>
+
+        <label for="date-input">Date:</label>
+        <input type="date" id="date-input" required />
+
+        <label for="class-select">Class:</label>
+        <select id="class-select" required>
+          <option value="economy">Economy</option>
+          <option value="business">Business</option>
+          <option value="first">First Class</option>
+        </select>
+
+        <label for="passengers-input">Number of Passengers:</label>
+        <input type="number" id="passengers-input" min="1" required />
+
+        <button type="submit" id="search-button">Search Flights</button>
+      </form>
+      <br /><br />
+      <table id="flights-table">
+        <thead>
+          <tr>
+            <th>Flight Number</th>
+            <th>Departure</th>
+            <th>Arrival</th>
+            <th>Price</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="flights-body">
+          <!-- Flight data will be dynamically populated here -->
+        </tbody>
+      </table>
+    </main>
+    <script src="booking.js"></script>
+  </body>
+</html>

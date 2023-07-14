@@ -1,0 +1,76 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john@example.com",
+      "password": "password",
+      "bookings": []
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "email": "jane@example.com",
+      "password": "password",
+      "bookings": []
+    }
+  ],
+  "flights": [
+    {
+      "id": 1,
+      "flightNumber": "ABC123",
+      "departure": "New York",
+      "arrival": "Los Angeles",
+      "price": 250,
+      "seatsAvailable": 150
+    },
+    {
+      "id": 2,
+      "flightNumber": "DEF456",
+      "departure": "London",
+      "arrival": "Paris",
+      "price": 150,
+      "seatsAvailable": 100
+    },
+    {
+      "id": 3,
+      "flightNumber": "GHI789",
+      "departure": "Tokyo",
+      "arrival": "Sydney",
+      "price": 400,
+      "seatsAvailable": 50
+    }
+  ],
+  "bookings": [
+    {
+      "userId": 1,
+      "flightId": "1",
+      "bookingDate": "2023-07-14T18:00:54.985Z",
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "flightId": "3",
+      "bookingDate": "2023-07-14T18:08:01.536Z",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "flightId": "2",
+      "bookingDate": "2023-07-14T18:10:50.195Z",
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "flightId": "1",
+      "bookingDate": "2023-07-14T18:16:07.462Z",
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "flightId": "1",
+      "bookingDate": "2023-07-14T18:17:42.971Z",
+      "id": 5
+    }
+  ]
+}
