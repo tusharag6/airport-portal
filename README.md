@@ -40,6 +40,3 @@ json-server --watch db.json
 - `booking.css`: CSS file for styling the Booking Page.
 - `booking.js`: JavaScript file for handling form submissions and API calls for booking.
 - `db.json`: JSON file serving as the backend database.
-
-
-Feel free to customize the content of the `README.md` file to match your project's specific details, instructions, and licensing information.
