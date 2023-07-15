@@ -1,22 +1,33 @@
 # Airline Booking Management Project
 
-This is a web application for managing airline bookings. It allows users to login, sign up, search for flights, and make bookings. The project is built using HTML, CSS, and JavaScript, with data stored in a JSON Server.
+This project is an Airline Booking Management System built using HTML, CSS, JavaScript, and JSON Server. It provides functionality for user login, signup, flight booking, and ticket confirmation.
 
 ## Features
 
-- User Authentication: Users can create accounts, login, and logout.
-- Flight Search: Users can search for flights based on departure, arrival, and date.
-- Flight Booking: Users can select a flight and book tickets.
-- Data Persistence: User and flight data are stored in a JSON Server.
+- User authentication: Users can sign up and log in to access the booking functionality.
+- Flight booking: Users can book flights, specifying the class and number of passengers.
+- Ticket confirmation: Users receive a confirmation ticket with booking details.
 
-## Prerequisites
+## Technologies Used
 
-- Web browser to run the HTML files.
-- JSON Server to serve the data. You can install it using npm:
+- HTML
+- CSS
+- JavaScript
+- JSON Server
 
-```bash
-npm install json-server
-```
+## Screenshots
+
+### Login / Signup Page
+
+![Login / Signup Page](/screenshots/auth.png)
+
+### Flight Booking Page
+
+![Flight Booking Page](/screenshots/booking.png)
+
+### Ticket Confirmation Page
+
+![Ticket Confirmation Page](/screenshots/ticketConf.png)
 
 ## Getting Started
 
@@ -26,17 +37,27 @@ npm install json-server
 git clone https://github.com/rz03/airport-portal.git
 ```
 
-2. Start the JSON Server:
+2. Install the dependencies:
+
+```bash
+cd airport-portal
+npm install
+```
+
+3. Start the JSON Server:
 
 ```bash
 json-server --watch db.json
 ```
 
-3. Open the `booking.html` file in your web browser
+4. Open the `auth.html` file in your web browser
 
 ## Project Structure
 
-- `booking.html`: Booking page HTML file.
-- `booking.css`: CSS file for styling the Booking Page.
-- `booking.js`: JavaScript file for handling form submissions and API calls for booking.
-- `db.json`: JSON file serving as the backend database.
+- `auth.html` : Landing page with login and signup forms
+- `booking.html` : Flight booking page.
+- `ticketConf.html` : Ticket confirmation page
+- `css/` : Directory containing CSS stylesheets
+- `js/` : Directory containing JavaScript files for different functionalities
+- `db.json`: JSON database file containing flight and user data
+- `screenshots/` : Directory for storing project screenshots

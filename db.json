@@ -21,7 +21,16 @@
       "name": "Jane Smith",
       "email": "jane@example.com",
       "password": "password",
-      "bookings": []
+      "bookings": [
+        {
+          "userId": "2",
+          "flightId": "1",
+          "bookingDate": "2023-07-15T11:16:18.571Z",
+          "classType": "first",
+          "passengers": 1,
+          "id": 23
+        }
+      ]
     },
     {
       "name": "tushar",
@@ -57,7 +66,7 @@
       "departureTime": "08:00 AM",
       "arrivalTime": "10:30 AM",
       "price": 250,
-      "seatsAvailable": 142
+      "seatsAvailable": 141
     },
     {
       "id": 2,
@@ -306,6 +315,14 @@
       "classType": "economy",
       "passengers": 1,
       "id": 22
+    },
+    {
+      "userId": "2",
+      "flightId": "1",
+      "bookingDate": "2023-07-15T11:16:18.571Z",
+      "classType": "first",
+      "passengers": 1,
+      "id": 23
     }
   ]
 }
