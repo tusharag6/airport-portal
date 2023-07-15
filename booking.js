@@ -60,10 +60,16 @@ async function bookFlight(event) {
 
       if (flight.seatsAvailable > 0) {
         const userId = 1;
+        const classType = document.getElementById("class-select").value;
+        const passengers = parseInt(
+          document.getElementById("passengers-input").value
+        );
         const booking = {
           userId,
           flightId,
           bookingDate,
+          class: classType,
+          passengers,
         };
 
         const bookingResponse = await fetch("http://localhost:3000/bookings", {
