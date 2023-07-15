@@ -107,3 +107,7 @@ select {
   padding-right: 30px;
   background-color: #fff;
 }
+
+#search-button {
+  margin-top: 10px;
+}

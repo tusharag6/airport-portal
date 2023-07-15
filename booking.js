@@ -68,7 +68,7 @@ async function bookFlight(event) {
           userId,
           flightId,
           bookingDate,
-          class: classType,
+          classType,
           passengers,
         };
 
@@ -89,10 +89,13 @@ async function bookFlight(event) {
             },
             body: JSON.stringify({ seatsAvailable: flight.seatsAvailable - 1 }),
           });
-
           const data = await bookingResponse.json();
           console.log("Booking successful:", data);
-          alert("Booking Successful");
+          // alert("Booking Successful");
+          // Store the booking ID in local storage
+          localStorage.setItem("bookingId", data.id);
+          // Redirect to the ticket confirmation page
+          window.location.href = "ticketConf.html";
         } else {
           alert("Booking failed");
           throw new Error("Booking failed");
