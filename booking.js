@@ -59,7 +59,8 @@ async function bookFlight(event) {
       const flight = await response.json();
 
       if (flight.seatsAvailable > 0) {
-        const userId = 1;
+        // Retrieve the user ID from local storage
+        const userId = localStorage.getItem("userId");
         const classType = document.getElementById("class-select").value;
         const passengers = parseInt(
           document.getElementById("passengers-input").value

@@ -13,6 +13,18 @@
       "email": "jane@example.com",
       "password": "password",
       "bookings": []
+    },
+    {
+      "name": "tushar",
+      "email": "tushar@gmail.com",
+      "password": "1234",
+      "id": 3
+    },
+    {
+      "name": "harsh",
+      "email": "harsh@gmail.com",
+      "password": "1234",
+      "id": 4
     }
   ],
   "flights": [
@@ -34,7 +46,7 @@
       "departureTime": "10:30 AM",
       "arrivalTime": "01:00 PM",
       "price": 200,
-      "seatsAvailable": 97
+      "seatsAvailable": 95
     },
     {
       "id": 3,
@@ -54,7 +66,7 @@
       "departureTime": "09:00 AM",
       "arrivalTime": "10:30 AM",
       "price": 150,
-      "seatsAvailable": 199
+      "seatsAvailable": 198
     },
     {
       "id": 5,
@@ -217,6 +229,30 @@
       "classType": "business",
       "passengers": 10,
       "id": 15
+    },
+    {
+      "userId": "3",
+      "flightId": "2",
+      "bookingDate": "2023-07-15T10:30:32.665Z",
+      "classType": "first",
+      "passengers": 1,
+      "id": 16
+    },
+    {
+      "userId": "1",
+      "flightId": "4",
+      "bookingDate": "2023-07-15T10:34:09.678Z",
+      "classType": "economy",
+      "passengers": 1,
+      "id": 17
+    },
+    {
+      "userId": "4",
+      "flightId": "2",
+      "bookingDate": "2023-07-15T10:35:34.160Z",
+      "classType": "economy",
+      "passengers": 1,
+      "id": 18
     }
   ]
 }
