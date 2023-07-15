@@ -44,6 +44,7 @@ document
       name,
       email,
       password,
+      bookings: [],
     };
 
     try {

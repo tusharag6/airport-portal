@@ -5,7 +5,16 @@
       "name": "John Doe",
       "email": "john@example.com",
       "password": "password",
-      "bookings": []
+      "bookings": [
+        {
+          "userId": "1",
+          "flightId": "1",
+          "bookingDate": "2023-07-15T10:49:08.851Z",
+          "classType": "economy",
+          "passengers": 1,
+          "id": 20
+        }
+      ]
     },
     {
       "id": 2,
@@ -18,13 +27,25 @@
       "name": "tushar",
       "email": "tushar@gmail.com",
       "password": "1234",
+      "bookings": [
+        {
+          "userId": "3",
+          "flightId": "2",
+          "bookingDate": "2023-07-15T10:51:14.682Z",
+          "classType": "economy",
+          "passengers": 5,
+          "id": 21
+        },
+        {
+          "userId": "3",
+          "flightId": "7",
+          "bookingDate": "2023-07-15T10:59:33.084Z",
+          "classType": "economy",
+          "passengers": 1,
+          "id": 22
+        }
+      ],
       "id": 3
-    },
-    {
-      "name": "harsh",
-      "email": "harsh@gmail.com",
-      "password": "1234",
-      "id": 4
     }
   ],
   "flights": [
@@ -36,7 +57,7 @@
       "departureTime": "08:00 AM",
       "arrivalTime": "10:30 AM",
       "price": 250,
-      "seatsAvailable": 143
+      "seatsAvailable": 142
     },
     {
       "id": 2,
@@ -46,7 +67,7 @@
       "departureTime": "10:30 AM",
       "arrivalTime": "01:00 PM",
       "price": 200,
-      "seatsAvailable": 95
+      "seatsAvailable": 93
     },
     {
       "id": 3,
@@ -96,7 +117,7 @@
       "departureTime": "09:30 AM",
       "arrivalTime": "04:00 PM",
       "price": 350,
-      "seatsAvailable": 119
+      "seatsAvailable": 118
     },
     {
       "id": 8,
@@ -253,6 +274,38 @@
       "classType": "economy",
       "passengers": 1,
       "id": 18
+    },
+    {
+      "userId": "4",
+      "flightId": "2",
+      "bookingDate": "2023-07-15T10:48:15.841Z",
+      "classType": "first",
+      "passengers": 1,
+      "id": 19
+    },
+    {
+      "userId": "1",
+      "flightId": "1",
+      "bookingDate": "2023-07-15T10:49:08.851Z",
+      "classType": "economy",
+      "passengers": 1,
+      "id": 20
+    },
+    {
+      "userId": "3",
+      "flightId": "2",
+      "bookingDate": "2023-07-15T10:51:14.682Z",
+      "classType": "economy",
+      "passengers": 5,
+      "id": 21
+    },
+    {
+      "userId": "3",
+      "flightId": "7",
+      "bookingDate": "2023-07-15T10:59:33.084Z",
+      "classType": "economy",
+      "passengers": 1,
+      "id": 22
     }
   ]
 }

@@ -91,6 +91,8 @@ async function bookFlight(event) {
             body: JSON.stringify({ seatsAvailable: flight.seatsAvailable - 1 }),
           });
           const data = await bookingResponse.json();
+          // Add the booking to the user's "bookings" array
+          await addBookingToUser(userId, data);
           console.log("Booking successful:", data);
           // alert("Booking Successful");
           // Store the booking ID in local storage
@@ -109,6 +111,28 @@ async function bookFlight(event) {
       alert("Error while fetching");
       console.error("Error:", error);
     }
+  }
+}
+
+// Function to add the booking to the user's "bookings" array
+async function addBookingToUser(userId, bookingData) {
+  try {
+    const response = await fetch(`http://localhost:3000/users/${userId}`);
+    const user = await response.json();
+
+    user.bookings.push(bookingData);
+
+    await fetch(`http://localhost:3000/users/${userId}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user),
+    });
+
+    console.log("Booking added to user:", user);
+  } catch (error) {
+    console.error("Error adding booking to user:", error);
   }
 }
 

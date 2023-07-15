@@ -15,6 +15,15 @@ async function fetchBookings(bookingId) {
     );
     const flight = await flightResponse.json();
 
+    // Retrieve the user details using the userId from the booking
+    const userResponse = await fetch(
+      `http://localhost:3000/users/${booking.userId}`
+    );
+    const user = await userResponse.json();
+
+    // Get the user's name from the user object
+    const userName = user.name;
+
     // Create a new div for each booking
     const bookingDiv = document.createElement("div");
     bookingDiv.classList.add("booking");
@@ -24,6 +33,10 @@ async function fetchBookings(bookingId) {
 
     // Populate the booking details
     bookingDiv.innerHTML = `
+        <div class="detail">
+          <span class="label">Passenger Name:</span>
+          <span class="value">${userName}</span>
+        </div>
         <div class="detail">
           <span class="label">Flight Number:</span>
           <span class="value">${flight.flightNumber}</span>
