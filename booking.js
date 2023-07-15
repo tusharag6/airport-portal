@@ -15,8 +15,14 @@ async function searchFlights(event) {
   try {
     const response = await fetch(url);
     const data = await response.json();
-    populateFlightsTable(data);
+    // console.log(data);
+    if (data.length > 0) {
+      populateFlightsTable(data);
+    } else {
+      alert("No flights available for the selected route.");
+    }
   } catch (error) {
+    alert("Error fetching the flights");
     console.error("Error fetching flights:", error);
   }
 }
@@ -31,8 +37,11 @@ function populateFlightsTable(flights) {
     row.innerHTML = `
       <td>${flight.flightNumber}</td>
       <td>${flight.departure}</td>
+      <td>${flight.departureTime}</td>
       <td>${flight.arrival}</td>
+      <td>${flight.arrivalTime}</td>
       <td>${flight.price}</td>
+      <td>${flight.seatsAvailable}</td>
       <td><button class="book-button" data-flight-id="${flight.id}">Book</button></td>
     `;
     flightsBody.appendChild(row);
@@ -46,12 +55,11 @@ async function bookFlight(event) {
     const bookingDate = new Date().toISOString();
 
     try {
-      // Fetch the user ID dynamically
-      const response = await fetch("http://localhost:3000/users");
-      const users = await response.json();
+      const response = await fetch(`http://localhost:3000/flights/${flightId}`);
+      const flight = await response.json();
 
-      if (users.length > 0) {
-        const userId = users[0].id; // Assuming the first user in the array, you can modify this based on your logic
+      if (flight.seatsAvailable > 0) {
+        const userId = 1;
         const booking = {
           userId,
           flightId,
@@ -66,16 +74,30 @@ async function bookFlight(event) {
           body: JSON.stringify(booking),
         });
 
-        const data = await bookingResponse.json();
-        console.log("Booking successful:", data);
-        alert("Booking Successful");
+        if (bookingResponse.ok) {
+          // Update the seats available for the flight
+          await fetch(`http://localhost:3000/flights/${flightId}`, {
+            method: "PATCH",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ seatsAvailable: flight.seatsAvailable - 1 }),
+          });
+
+          const data = await bookingResponse.json();
+          console.log("Booking successful:", data);
+          alert("Booking Successful");
+        } else {
+          alert("Booking failed");
+          throw new Error("Booking failed");
+        }
       } else {
-        console.error("No users found");
-        // Handle case when no users are available
+        alert("FLight Not Available");
+        console.error("Flight not available, please book another flight");
       }
     } catch (error) {
+      alert("Error while fetching");
       console.error("Error:", error);
-      alert("Error");
     }
   }
 }

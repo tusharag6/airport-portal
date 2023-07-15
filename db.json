@@ -21,6 +21,8 @@
       "flightNumber": "ABC123",
       "departure": "New York",
       "arrival": "Los Angeles",
+      "departureTime": "08:00 AM",
+      "arrivalTime": "10:30 AM",
       "price": 250,
       "seatsAvailable": 150
     },
@@ -29,6 +31,8 @@
       "flightNumber": "DEF456",
       "departure": "London",
       "arrival": "Paris",
+      "departureTime": "10:00 AM",
+      "arrivalTime": "12:00 PM",
       "price": 150,
       "seatsAvailable": 100
     },
@@ -37,40 +41,89 @@
       "flightNumber": "GHI789",
       "departure": "Tokyo",
       "arrival": "Sydney",
+      "departureTime": "02:30 PM",
+      "arrivalTime": "11:30 PM",
       "price": 400,
       "seatsAvailable": 50
+    },
+    {
+      "id": 4,
+      "flightNumber": "JKL012",
+      "departure": "Singapore",
+      "arrival": "Kuala Lumpur",
+      "departureTime": "09:45 AM",
+      "arrivalTime": "10:30 AM",
+      "price": 100,
+      "seatsAvailable": 200
+    },
+    {
+      "id": 5,
+      "flightNumber": "MNO345",
+      "departure": "Dubai",
+      "arrival": "Istanbul",
+      "departureTime": "01:00 PM",
+      "arrivalTime": "03:30 PM",
+      "price": 300,
+      "seatsAvailable": 75
+    },
+    {
+      "id": 6,
+      "flightNumber": "PQR678",
+      "departure": "Rome",
+      "arrival": "Athens",
+      "departureTime": "11:15 AM",
+      "arrivalTime": "01:00 PM",
+      "price": 200,
+      "seatsAvailable": 120
+    },
+    {
+      "id": 7,
+      "flightNumber": "STU901",
+      "departure": "Moscow",
+      "arrival": "Berlin",
+      "departureTime": "08:30 AM",
+      "arrivalTime": "10:00 AM",
+      "price": 180,
+      "seatsAvailable": 90
+    },
+    {
+      "id": 8,
+      "flightNumber": "VWX234",
+      "departure": "Beijing",
+      "arrival": "Shanghai",
+      "departureTime": "11:45 AM",
+      "arrivalTime": "01:15 PM",
+      "price": 120,
+      "seatsAvailable": 180
+    },
+    {
+      "id": 9,
+      "flightNumber": "YZA567",
+      "departure": "Cairo",
+      "arrival": "Nairobi",
+      "departureTime": "04:30 PM",
+      "arrivalTime": "07:15 PM",
+      "price": 280,
+      "seatsAvailable": 60
+    },
+    {
+      "id": 10,
+      "flightNumber": "BCD890",
+      "departure": "Mexico City",
+      "arrival": "Toronto",
+      "departureTime": "03:00 PM",
+      "arrivalTime": "08:30 PM",
+      "price": 220,
+      "seatsAvailable": 110
     }
   ],
+
   "bookings": [
     {
       "userId": 1,
       "flightId": "1",
-      "bookingDate": "2023-07-14T18:00:54.985Z",
+      "bookingDate": "2023-07-15T06:55:22.908Z",
       "id": 1
-    },
-    {
-      "userId": 1,
-      "flightId": "3",
-      "bookingDate": "2023-07-14T18:08:01.536Z",
-      "id": 2
-    },
-    {
-      "userId": 1,
-      "flightId": "2",
-      "bookingDate": "2023-07-14T18:10:50.195Z",
-      "id": 3
-    },
-    {
-      "userId": 1,
-      "flightId": "1",
-      "bookingDate": "2023-07-14T18:16:07.462Z",
-      "id": 4
-    },
-    {
-      "userId": 1,
-      "flightId": "1",
-      "bookingDate": "2023-07-14T18:17:42.971Z",
-      "id": 5
     }
   ]
 }
