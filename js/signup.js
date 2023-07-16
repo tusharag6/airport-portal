@@ -4,10 +4,12 @@ document
   .addEventListener("submit", async function (event) {
     event.preventDefault();
 
+    // Storing user input
     const name = document.getElementById("id_name").value;
     const email = document.getElementById("id_email").value;
     const password = document.getElementById("id_password").value;
 
+    // Making user object to append users array in server after successful signup
     const user = {
       name,
       email,
@@ -16,6 +18,7 @@ document
     };
 
     try {
+      // Posting user object to users end point / users array in server
       const response = await fetch("http://localhost:3000/users", {
         method: "POST",
         headers: {
@@ -25,9 +28,6 @@ document
       });
 
       if (response.ok) {
-        const data = await response.json();
-        console.log("User created successfully:", data);
-
         // Redirect to login page after successful signup
         window.location.href = "login.html";
       } else {

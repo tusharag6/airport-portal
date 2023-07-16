@@ -4,10 +4,12 @@ document
   .addEventListener("submit", async function (event) {
     event.preventDefault();
 
+    // Storing user input
     const email = document.getElementById("login-email").value;
     const password = document.getElementById("login-password").value;
 
     try {
+      // Get request from the users endpoint
       const response = await fetch("http://localhost:3000/users");
       const users = await response.json();
 

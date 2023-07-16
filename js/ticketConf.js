@@ -6,6 +6,7 @@ const bookingId = localStorage.getItem("bookingId");
 // Function to fetch booking data from JSON server
 async function fetchBookings(bookingId) {
   try {
+    // Fetch the booking
     const response = await fetch(`http://localhost:3000/bookings/${bookingId}`);
     const booking = await response.json();
 
