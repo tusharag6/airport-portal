@@ -5,7 +5,16 @@
       "name": "John Doe",
       "email": "john@example.com",
       "password": "password",
-      "bookings": []
+      "bookings": [
+        {
+          "userId": "1",
+          "flightId": "2",
+          "bookingDate": "2023-07-16T13:17:57.327Z",
+          "classType": "economy",
+          "passengers": "1",
+          "id": 3
+        }
+      ]
     },
     {
       "id": 2,
@@ -52,6 +61,29 @@
         }
       ],
       "id": 5
+    },
+    {
+      "name": "tushar agrawal",
+      "email": "tusharagrawal06112@gmail.com",
+      "password": "password",
+      "bookings": [
+        {
+          "userId": "6",
+          "flightId": "1",
+          "bookingDate": "2023-07-16T13:45:16.329Z",
+          "classType": "economy",
+          "passengers": "1",
+          "id": 4
+        }
+      ],
+      "id": 6
+    },
+    {
+      "name": "tushar agrawal",
+      "email": "tusharagrawal06112@gmail.com",
+      "password": "password",
+      "bookings": [],
+      "id": 7
     }
   ],
   "flights": [
@@ -63,7 +95,7 @@
       "departureTime": "08:00 AM",
       "arrivalTime": "10:30 AM",
       "price": 250,
-      "seatsAvailable": 150
+      "seatsAvailable": 149
     },
     {
       "id": 2,
@@ -73,7 +105,7 @@
       "departureTime": "10:30 AM",
       "arrivalTime": "01:00 PM",
       "price": 200,
-      "seatsAvailable": 100
+      "seatsAvailable": 99
     },
     {
       "id": 3,
@@ -152,6 +184,22 @@
       "classType": "business",
       "passengers": "4",
       "id": 2
+    },
+    {
+      "userId": "1",
+      "flightId": "2",
+      "bookingDate": "2023-07-16T13:17:57.327Z",
+      "classType": "economy",
+      "passengers": "1",
+      "id": 3
+    },
+    {
+      "userId": "6",
+      "flightId": "1",
+      "bookingDate": "2023-07-16T13:45:16.329Z",
+      "classType": "economy",
+      "passengers": "1",
+      "id": 4
     }
   ]
 }
