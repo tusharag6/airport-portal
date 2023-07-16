@@ -101,18 +101,3 @@ button:hover {
 .login-link a:hover {
   text-decoration: underline;
 }
-
-.forgot-password {
-  font-size: 14px;
-  margin-top: 20px;
-  color: #666;
-}
-
-.forgot-password a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.forgot-password a:hover {
-  text-decoration: underline;
-}

@@ -5,7 +5,7 @@ This project is an Airline Booking Management System built using HTML, CSS, Java
 ## Features
 
 - User authentication: Users can sign up and log in to access the booking functionality.
-- Flight booking: Users can book flights, specifying the class and number of passengers.
+- Flight booking: Users can book flights, specifying source, destination, date, class and number of passengers.
 - Ticket confirmation: Users receive a confirmation ticket with booking details.
 
 ## Technologies Used
@@ -17,9 +17,13 @@ This project is an Airline Booking Management System built using HTML, CSS, Java
 
 ## Screenshots
 
-### Login / Signup Page
+### Signup Page
 
-![Login / Signup Page](/screenshots/auth.png)
+![Signup Page](/screenshots/signup.png)
+
+### Login Page
+
+![Login Page](/screenshots/login.png)
 
 ### Flight Booking Page
 
@@ -31,7 +35,7 @@ This project is an Airline Booking Management System built using HTML, CSS, Java
 
 ### Ticket Confirmation Page
 
-![Ticket Confirmation Page](/screenshots/ticketConf.png)
+![Ticket Confirmation Page](/screenshots/ticket-display.png)
 
 ## Getting Started
 
@@ -54,14 +58,17 @@ npm install
 json-server --watch db.json
 ```
 
-4. Open the `auth.html` file in your web browser
+4. Open the `signup.html` file in your web browser
 
 ## Project Structure
 
-- `auth.html` : Landing page with login and signup forms
-- `booking.html` : Flight booking page.
+- `signup.html` : Landing page with signup form
+- `login.html` : Landing page with login form
+- `booking.html` : Flight booking page
+- `flightDisplay.html` : Available flights display page
 - `ticketConf.html` : Ticket confirmation page
 - `css/` : Directory containing CSS stylesheets
 - `js/` : Directory containing JavaScript files for different functionalities
+- `img/` : Directory containing images
 - `db.json`: JSON database file containing flight and user data
 - `screenshots/` : Directory for storing project screenshots

@@ -3,20 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/ticketConf.css" />
+    <!-- <link rel="stylesheet" href="css/ticketConf.css" /> -->
+    <link rel="stylesheet" href="/css/ticket.css" />
     <title>Ticket Confirmation</title>
   </head>
   <body>
-    <h1 class="title">Ticket Confirmation</h1>
-    <div class="container">
+    <div class="ticketConf">
       <div class="ticket">
-        <h2 class="flight-info">Flight Information</h2>
-        <div class="ticket-details" id="ticket-details">
-          <!-- Booking details will be dynamically added here -->
+        <h1 class="ticket-heading">Flight Ticket</h1>
+        <div class="ticket-details">
+          <table class="ticket-table">
+            <thead>
+              <tr>
+                <th>Passenger Name</th>
+                <th>Flight Number</th>
+                <th>Departure</th>
+                <th>Arrival</th>
+                <th>Departure Time</th>
+                <th>Arrival Time</th>
+                <th>Class</th>
+                <th>Passengers</th>
+                <th>Total Price</th>
+              </tr>
+            </thead>
+            <tbody id="ticket-details">
+              <!-- Booking details will be dynamically added here -->
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
-
     <script src="js/ticketConf.js"></script>
   </body>
 </html>
