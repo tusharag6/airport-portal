@@ -5,32 +5,14 @@
       "name": "John Doe",
       "email": "john@example.com",
       "password": "password",
-      "bookings": [
-        {
-          "userId": "1",
-          "flightId": "1",
-          "bookingDate": "2023-07-15T10:49:08.851Z",
-          "classType": "economy",
-          "passengers": 1,
-          "id": 20
-        }
-      ]
+      "bookings": []
     },
     {
       "id": 2,
       "name": "Jane Smith",
       "email": "jane@example.com",
       "password": "password",
-      "bookings": [
-        {
-          "userId": "2",
-          "flightId": "1",
-          "bookingDate": "2023-07-15T11:16:18.571Z",
-          "classType": "first",
-          "passengers": 1,
-          "id": 23
-        }
-      ]
+      "bookings": []
     },
     {
       "name": "tushar",
@@ -39,22 +21,37 @@
       "bookings": [
         {
           "userId": "3",
-          "flightId": "2",
-          "bookingDate": "2023-07-15T10:51:14.682Z",
-          "classType": "economy",
-          "passengers": 5,
-          "id": 21
-        },
-        {
-          "userId": "3",
-          "flightId": "7",
-          "bookingDate": "2023-07-15T10:59:33.084Z",
-          "classType": "economy",
-          "passengers": 1,
-          "id": 22
+          "flightId": "6",
+          "bookingDate": "2023-07-15T18:17:49.018Z",
+          "classType": "first",
+          "passengers": "2",
+          "id": 1
         }
       ],
       "id": 3
+    },
+    {
+      "name": "harsh",
+      "email": "harsh@abc.com",
+      "password": "123456",
+      "bookings": [],
+      "id": 4
+    },
+    {
+      "name": "Tushar Agrawal",
+      "email": "test@test.com",
+      "password": "test",
+      "bookings": [
+        {
+          "userId": "5",
+          "flightId": "7",
+          "bookingDate": "2023-07-15T18:20:44.568Z",
+          "classType": "business",
+          "passengers": "4",
+          "id": 2
+        }
+      ],
+      "id": 5
     }
   ],
   "flights": [
@@ -66,7 +63,7 @@
       "departureTime": "08:00 AM",
       "arrivalTime": "10:30 AM",
       "price": 250,
-      "seatsAvailable": 141
+      "seatsAvailable": 150
     },
     {
       "id": 2,
@@ -76,7 +73,7 @@
       "departureTime": "10:30 AM",
       "arrivalTime": "01:00 PM",
       "price": 200,
-      "seatsAvailable": 93
+      "seatsAvailable": 100
     },
     {
       "id": 3,
@@ -86,7 +83,7 @@
       "departureTime": "01:30 PM",
       "arrivalTime": "04:00 PM",
       "price": 180,
-      "seatsAvailable": 74
+      "seatsAvailable": 75
     },
     {
       "id": 4,
@@ -96,7 +93,7 @@
       "departureTime": "09:00 AM",
       "arrivalTime": "10:30 AM",
       "price": 150,
-      "seatsAvailable": 198
+      "seatsAvailable": 100
     },
     {
       "id": 5,
@@ -106,7 +103,7 @@
       "departureTime": "01:00 PM",
       "arrivalTime": "02:30 PM",
       "price": 120,
-      "seatsAvailable": 99
+      "seatsAvailable": 100
     },
     {
       "id": 6,
@@ -126,7 +123,7 @@
       "departureTime": "09:30 AM",
       "arrivalTime": "04:00 PM",
       "price": 350,
-      "seatsAvailable": 118
+      "seatsAvailable": 119
     },
     {
       "id": 8,
@@ -136,193 +133,25 @@
       "departureTime": "02:30 PM",
       "arrivalTime": "11:30 PM",
       "price": 400,
-      "seatsAvailable": 47
+      "seatsAvailable": 75
     }
   ],
   "bookings": [
     {
-      "userId": 1,
-      "flightId": "1",
-      "bookingDate": "2023-07-15T07:27:53.169Z",
+      "userId": "3",
+      "flightId": "6",
+      "bookingDate": "2023-07-15T18:17:49.018Z",
       "classType": "first",
-      "passengers": 2,
+      "passengers": "2",
       "id": 1
     },
     {
-      "userId": 1,
-      "flightId": "2",
-      "bookingDate": "2023-07-15T09:03:03.224Z",
-      "classType": "economy",
-      "passengers": 1,
+      "userId": "5",
+      "flightId": "7",
+      "bookingDate": "2023-07-15T18:20:44.568Z",
+      "classType": "business",
+      "passengers": "4",
       "id": 2
-    },
-    {
-      "userId": 1,
-      "flightId": "4",
-      "bookingDate": "2023-07-15T09:09:19.122Z",
-      "classType": "economy",
-      "passengers": 1,
-      "id": 3
-    },
-    {
-      "userId": 1,
-      "flightId": "6",
-      "bookingDate": "2023-07-15T09:10:53.131Z",
-      "classType": "first",
-      "passengers": 2,
-      "id": 4
-    },
-    {
-      "userId": 1,
-      "flightId": "1",
-      "bookingDate": "2023-07-15T09:11:20.641Z",
-      "classType": "economy",
-      "passengers": 2,
-      "id": 5
-    },
-    {
-      "userId": 1,
-      "flightId": "2",
-      "bookingDate": "2023-07-15T09:12:58.681Z",
-      "classType": "business",
-      "passengers": 1,
-      "id": 6
-    },
-    {
-      "userId": 1,
-      "flightId": "1",
-      "bookingDate": "2023-07-15T09:13:30.889Z",
-      "classType": "economy",
-      "passengers": 2,
-      "id": 7
-    },
-    {
-      "userId": 1,
-      "flightId": "1",
-      "bookingDate": "2023-07-15T09:24:17.939Z",
-      "classType": "economy",
-      "passengers": 5,
-      "id": 8
-    },
-    {
-      "userId": 1,
-      "flightId": "2",
-      "bookingDate": "2023-07-15T09:26:22.011Z",
-      "classType": "economy",
-      "passengers": 5,
-      "id": 9
-    },
-    {
-      "userId": 1,
-      "flightId": "1",
-      "bookingDate": "2023-07-15T09:30:58.630Z",
-      "classType": "economy",
-      "passengers": 1,
-      "id": 10
-    },
-    {
-      "userId": 1,
-      "flightId": "7",
-      "bookingDate": "2023-07-15T09:39:40.221Z",
-      "classType": "economy",
-      "passengers": 1,
-      "id": 11
-    },
-    {
-      "userId": 1,
-      "flightId": "8",
-      "bookingDate": "2023-07-15T09:41:14.911Z",
-      "classType": "economy",
-      "passengers": 1,
-      "id": 12
-    },
-    {
-      "userId": 1,
-      "flightId": "8",
-      "bookingDate": "2023-07-15T09:43:00.229Z",
-      "classType": "first",
-      "passengers": 1,
-      "id": 13
-    },
-    {
-      "userId": 1,
-      "flightId": "8",
-      "bookingDate": "2023-07-15T09:43:21.439Z",
-      "classType": "first",
-      "passengers": 2,
-      "id": 14
-    },
-    {
-      "userId": 1,
-      "flightId": "1",
-      "bookingDate": "2023-07-15T10:08:26.509Z",
-      "classType": "business",
-      "passengers": 10,
-      "id": 15
-    },
-    {
-      "userId": "3",
-      "flightId": "2",
-      "bookingDate": "2023-07-15T10:30:32.665Z",
-      "classType": "first",
-      "passengers": 1,
-      "id": 16
-    },
-    {
-      "userId": "1",
-      "flightId": "4",
-      "bookingDate": "2023-07-15T10:34:09.678Z",
-      "classType": "economy",
-      "passengers": 1,
-      "id": 17
-    },
-    {
-      "userId": "4",
-      "flightId": "2",
-      "bookingDate": "2023-07-15T10:35:34.160Z",
-      "classType": "economy",
-      "passengers": 1,
-      "id": 18
-    },
-    {
-      "userId": "4",
-      "flightId": "2",
-      "bookingDate": "2023-07-15T10:48:15.841Z",
-      "classType": "first",
-      "passengers": 1,
-      "id": 19
-    },
-    {
-      "userId": "1",
-      "flightId": "1",
-      "bookingDate": "2023-07-15T10:49:08.851Z",
-      "classType": "economy",
-      "passengers": 1,
-      "id": 20
-    },
-    {
-      "userId": "3",
-      "flightId": "2",
-      "bookingDate": "2023-07-15T10:51:14.682Z",
-      "classType": "economy",
-      "passengers": 5,
-      "id": 21
-    },
-    {
-      "userId": "3",
-      "flightId": "7",
-      "bookingDate": "2023-07-15T10:59:33.084Z",
-      "classType": "economy",
-      "passengers": 1,
-      "id": 22
-    },
-    {
-      "userId": "2",
-      "flightId": "1",
-      "bookingDate": "2023-07-15T11:16:18.571Z",
-      "classType": "first",
-      "passengers": 1,
-      "id": 23
     }
   ]
 }

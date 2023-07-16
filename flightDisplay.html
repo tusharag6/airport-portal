@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Airline Booking</title>
+    <!-- Google font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap -->
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!-- Custom stlylesheet -->
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div id="booking" class="section">
+      <div class="section-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="booking-cta">
+                <h1>Book your flight today</h1>
+                <p>
+                  Discover the world with our seamless travel booking
+                  experience.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-7 col-md-offset-1">
+              <div class="booking-form">
+                <table id="flights-table">
+                  <thead>
+                    <tr>
+                      <th>Flight Number</th>
+                      <th>Departure</th>
+                      <th>Dep Time</th>
+                      <th>Arrival</th>
+                      <th>Arr Time</th>
+                      <th>Price</th>
+                      <th>Seats</th>
+                      <th></th>
+                    </tr>
+                    <tr></tr>
+                  </thead>
+                  <tbody id="flights-body">
+                    <!-- Flight data will be dynamically populated here -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="booking.html"></script>
+    <script src="/js/flightDisplay.js"></script>
+  </body>
+</html>

@@ -1,68 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Airline Booking</title>
-    <link rel="stylesheet" href="/css/booking.css" />
+
+    <!-- Google font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap -->
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!-- Custom stlylesheet -->
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
   </head>
+
   <body>
-    <header>
-      <h1>Airline Booking</h1>
-    </header>
-
-    <main>
-      <h2>Flight Booking</h2>
-      <form id="booking-form">
-        <label for="from-select">From:</label>
-        <select id="from-select" required>
-          <option value="">Select origin</option>
-          <option value="New York">New York</option>
-          <option value="London">London</option>
-          <option value="Tokyo">Tokyo</option>
-        </select>
-
-        <label for="to-select">To:</label>
-        <select id="to-select" required>
-          <option value="">Select destination</option>
-          <option value="Los Angeles">Los Angeles</option>
-          <option value="Paris">Paris</option>
-          <option value="Sydney">Sydney</option>
-        </select>
-
-        <label for="date-input">Date:</label>
-        <input type="date" id="date-input" required />
-
-        <label for="class-select">Class:</label>
-        <select id="class-select" required>
-          <option value="economy">Economy</option>
-          <option value="business">Business</option>
-          <option value="first">First Class</option>
-        </select>
-
-        <label for="passengers-input">Number of Passengers:</label>
-        <input type="number" id="passengers-input" min="1" required />
-
-        <button type="submit" id="search-button">Search Flights</button>
-      </form>
-      <br /><br />
-      <table id="flights-table">
-        <thead>
-          <tr>
-            <th>Flight Number</th>
-            <th>Departure</th>
-            <th>Dep Time</th>
-            <th>Arrival</th>
-            <th>Arr Time</th>
-            <th>Price</th>
-            <th>Seats</th>
-            <th></th>
-          </tr>
-          <tr></tr>
-        </thead>
-        <tbody id="flights-body">
-          <!-- Flight data will be dynamically populated here -->
-        </tbody>
-      </table>
-    </main>
-    <script src="js/booking.js"></script>
+    <div id="booking" class="section">
+      <div class="section-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="booking-cta">
+                <h1>Book your flight today</h1>
+                <p>
+                  Discover the world with our seamless travel booking
+                  experience.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-7 col-md-offset-1">
+              <div class="booking-form">
+                <form id="booking-form">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <span class="form-label">Flying from</span>
+                        <select id="from-select" class="form-control" required>
+                          <option value="">Select origin</option>
+                          <option value="New York">New York</option>
+                          <option value="London">London</option>
+                          <option value="Tokyo">Tokyo</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <span class="form-label">Flyning to</span>
+                        <select id="to-select" class="form-control" required>
+                          <option value="">Select destination</option>
+                          <option value="Los Angeles">Los Angeles</option>
+                          <option value="Paris">Paris</option>
+                          <option value="Sydney">Sydney</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <span class="form-label">Departing</span>
+                        <input
+                          class="form-control"
+                          id="date-input"
+                          type="date"
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <span class="form-label">Passengers </span>
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="passengers-input"
+                          min="1"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <span class="form-label">Travel class</span>
+                        <select class="form-control" id="class-select" required>
+                          <option value="economy">Economy class</option>
+                          <option value="business">Business class</option>
+                          <option value="first">First class</option>
+                        </select>
+                        <span class="select-arrow"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-btn">
+                    <button class="submit-btn" type="submit" id="search-button">
+                      Show flights
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/js/booking.js"></script>
+    <script src="js/flightDisplay.js"></script>
   </body>
 </html>

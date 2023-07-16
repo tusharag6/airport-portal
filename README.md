@@ -25,6 +25,10 @@ This project is an Airline Booking Management System built using HTML, CSS, Java
 
 ![Flight Booking Page](/screenshots/booking.png)
 
+### Available Flights Display Page
+
+![Available Flights Display Page](/screenshots/flightDisplay.png)
+
 ### Ticket Confirmation Page
 
 ![Ticket Confirmation Page](/screenshots/ticketConf.png)
