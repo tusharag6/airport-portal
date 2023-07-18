@@ -15,7 +15,7 @@ async function searchFlights(event) {
   const fclass = classType.value;
   const passengers = passengersInput.value;
 
-  const url = `http://localhost:3000/flights?departure=${from}&arrival=${to}`;
+  const url = `https://airport-portal-api.onrender.com/flights?departure=${from}&arrival=${to}`;
 
   try {
     // Get Request

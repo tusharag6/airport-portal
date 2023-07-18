@@ -10,7 +10,9 @@ document
 
     try {
       // Get request from the users endpoint
-      const response = await fetch("http://localhost:3000/users");
+      const response = await fetch(
+        "https://airport-portal-api.onrender.com/users"
+      );
       const users = await response.json();
 
       // Find the user with matching email and password

@@ -31,7 +31,9 @@ async function bookFlight(event) {
     const bookingDate = new Date().toISOString();
 
     try {
-      const response = await fetch(`http://localhost:3000/flights/${flightId}`);
+      const response = await fetch(
+        `https://airport-portal-api.onrender.com/flights/${flightId}`
+      );
       const flight = await response.json();
 
       // Check if seats are available in the selected flight
@@ -51,25 +53,31 @@ async function bookFlight(event) {
         };
 
         // Posting the booking object to the server at bookings endpoint
-        const bookingResponse = await fetch("http://localhost:3000/bookings", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(booking),
-        });
-
-        if (bookingResponse.ok) {
-          // Update the seats available for the flight
-          await fetch(`http://localhost:3000/flights/${flightId}`, {
-            method: "PATCH",
+        const bookingResponse = await fetch(
+          "https://airport-portal-api.onrender.com/bookings",
+          {
+            method: "POST",
             headers: {
               "Content-Type": "application/json",
             },
-            body: JSON.stringify({
-              seatsAvailable: flight.seatsAvailable - passengers,
-            }),
-          });
+            body: JSON.stringify(booking),
+          }
+        );
+
+        if (bookingResponse.ok) {
+          // Update the seats available for the flight
+          await fetch(
+            `https://airport-portal-api.onrender.com/flights/${flightId}`,
+            {
+              method: "PATCH",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                seatsAvailable: flight.seatsAvailable - passengers,
+              }),
+            }
+          );
 
           // Add the booking to the user's "bookings" array
           const data = await bookingResponse.json();
@@ -98,13 +106,15 @@ async function bookFlight(event) {
 // Function to add the booking to the user's "bookings" array
 async function addBookingToUser(userId, bookingData) {
   try {
-    const response = await fetch(`http://localhost:3000/users/${userId}`);
+    const response = await fetch(
+      `https://airport-portal-api.onrender.com/users/${userId}`
+    );
     const user = await response.json();
 
     user.bookings.push(bookingData);
 
     // Updating the users array / endpoint
-    await fetch(`http://localhost:3000/users/${userId}`, {
+    await fetch(`https://airport-portal-api.onrender.com/users/${userId}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

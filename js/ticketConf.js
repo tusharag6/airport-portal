@@ -7,18 +7,20 @@ const bookingId = localStorage.getItem("bookingId");
 async function fetchBookings(bookingId) {
   try {
     // Fetch the booking
-    const response = await fetch(`http://localhost:3000/bookings/${bookingId}`);
+    const response = await fetch(
+      `https://airport-portal-api.onrender.com/bookings/${bookingId}`
+    );
     const booking = await response.json();
 
     // Fetch flight details
     const flightResponse = await fetch(
-      `http://localhost:3000/flights/${booking.flightId}`
+      `https://airport-portal-api.onrender.com/flights/${booking.flightId}`
     );
     const flight = await flightResponse.json();
 
     // Retrieve the user details using the userId from the booking
     const userResponse = await fetch(
-      `http://localhost:3000/users/${booking.userId}`
+      `https://airport-portal-api.onrender.com/users/${booking.userId}`
     );
     const user = await userResponse.json();
 

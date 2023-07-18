@@ -43,6 +43,14 @@
           "classType": "first",
           "passengers": "2",
           "id": 3
+        },
+        {
+          "userId": "3",
+          "flightId": "4",
+          "bookingDate": "2023-07-17T04:59:01.451Z",
+          "classType": "economy",
+          "passengers": "1",
+          "id": 10
         }
       ],
       "id": 3
@@ -70,6 +78,53 @@
         }
       ],
       "id": 4
+    },
+    {
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "1234",
+      "bookings": [
+        {
+          "userId": "5",
+          "flightId": "3",
+          "bookingDate": "2023-07-16T18:29:41.853Z",
+          "classType": "economy",
+          "passengers": "1",
+          "id": 9
+        }
+      ],
+      "id": 5
+    },
+    {
+      "name": "tushar agrawal",
+      "email": "tushar123@gmail.com",
+      "password": "1234",
+      "bookings": [],
+      "id": 6
+    },
+    {
+      "name": "pixel pulse",
+      "email": "pixel@gmail.com",
+      "password": "1234",
+      "bookings": [
+        {
+          "userId": "7",
+          "flightId": "1",
+          "bookingDate": "2023-07-17T06:32:02.769Z",
+          "classType": "first",
+          "passengers": "2",
+          "id": 11
+        },
+        {
+          "userId": "7",
+          "flightId": "7",
+          "bookingDate": "2023-07-17T06:34:48.322Z",
+          "classType": "first",
+          "passengers": "1",
+          "id": 12
+        }
+      ],
+      "id": 7
     }
   ],
   "flights": [
@@ -81,7 +136,7 @@
       "departureTime": "08:00 AM",
       "arrivalTime": "10:30 AM",
       "price": 250,
-      "seatsAvailable": 142
+      "seatsAvailable": 140
     },
     {
       "id": 2,
@@ -101,7 +156,7 @@
       "departureTime": "01:30 PM",
       "arrivalTime": "04:00 PM",
       "price": 180,
-      "seatsAvailable": 75
+      "seatsAvailable": 73
     },
     {
       "id": 4,
@@ -111,7 +166,7 @@
       "departureTime": "09:00 AM",
       "arrivalTime": "10:30 AM",
       "price": 150,
-      "seatsAvailable": 100
+      "seatsAvailable": 99
     },
     {
       "id": 5,
@@ -141,7 +196,7 @@
       "departureTime": "09:30 AM",
       "arrivalTime": "04:00 PM",
       "price": 350,
-      "seatsAvailable": 116
+      "seatsAvailable": 115
     },
     {
       "id": 8,
@@ -210,6 +265,46 @@
       "classType": "economy",
       "passengers": "3",
       "id": 7
+    },
+    {
+      "userId": "5",
+      "flightId": "3",
+      "bookingDate": "2023-07-16T18:29:38.248Z",
+      "classType": "economy",
+      "passengers": "1",
+      "id": 8
+    },
+    {
+      "userId": "5",
+      "flightId": "3",
+      "bookingDate": "2023-07-16T18:29:41.853Z",
+      "classType": "economy",
+      "passengers": "1",
+      "id": 9
+    },
+    {
+      "userId": "3",
+      "flightId": "4",
+      "bookingDate": "2023-07-17T04:59:01.451Z",
+      "classType": "economy",
+      "passengers": "1",
+      "id": 10
+    },
+    {
+      "userId": "7",
+      "flightId": "1",
+      "bookingDate": "2023-07-17T06:32:02.769Z",
+      "classType": "first",
+      "passengers": "2",
+      "id": 11
+    },
+    {
+      "userId": "7",
+      "flightId": "7",
+      "bookingDate": "2023-07-17T06:34:48.322Z",
+      "classType": "first",
+      "passengers": "1",
+      "id": 12
     }
   ]
 }
