@@ -52,13 +52,17 @@ cd airport-portal
 npm install
 ```
 
-3. Start the JSON Server:
+3. If you want to use local JSON Server not the deployed JSON Server then, change the url in case of fetching and posting to localhost:3000 in place of this url (https://airport-portal-api.onrender.com/) in the JS files
+   
+JSON Server GitHub : https://github.com/rz03/airport-portal-api
+
+4. Start the JSON Server:
 
 ```bash
 json-server --watch db.json
 ```
 
-4. Open the `index.html` file in your web browser
+5. Open the `index.html` file in your web browser
 
 ## Project Structure
 
@@ -72,5 +76,3 @@ json-server --watch db.json
 - `img/` : Directory containing images
 - `db.json`: JSON database file containing flight and user data
 - `screenshots/` : Directory for storing project screenshots
-
-API GitHub : https://github.com/rz03/airport-portal-api
