@@ -58,7 +58,7 @@ npm install
 json-server --watch db.json
 ```
 
-4. Open the `signup.html` file in your web browser
+4. Open the `index.html` file in your web browser
 
 ## Project Structure
 
@@ -72,3 +72,5 @@ json-server --watch db.json
 - `img/` : Directory containing images
 - `db.json`: JSON database file containing flight and user data
 - `screenshots/` : Directory for storing project screenshots
+
+API GitHub : https://github.com/rz03/airport-portal-api
