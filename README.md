@@ -42,7 +42,7 @@ This project is an Airline Booking Management System built using HTML, CSS, Java
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/rz03/airport-portal.git
+https://github.com/tusharag6/airport-portal.git
 ```
 
 2. Install the dependencies:
@@ -54,7 +54,7 @@ npm install
 
 3. If you want to use local JSON Server not the deployed JSON Server then, change the url in case of fetching and posting to localhost:3000 in place of this url (https://airport-portal-api.onrender.com/) in the JS files
    
-JSON Server GitHub : https://github.com/rz03/airport-portal-api
+JSON Server GitHub : https://github.com/tusharag6/airport-portal-api
 
 4. Start the JSON Server:
 
